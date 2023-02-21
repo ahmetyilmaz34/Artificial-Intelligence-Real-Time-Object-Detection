@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="ttk.Panedwindow" id="PW_Base">
+    <property name="height">600</property>
+    <property name="orient">vertical</property>
+    <property name="width">800</property>
+    <layout manager="pack">
+      <property name="propagate">True</property>
+      <property name="side">top</property>
+    </layout>
+    <child>
+      <object class="ttk.Panedwindow.Pane" id="P_Header">
+        <property name="weight">1</property>
+        <child>
+          <object class="ttk.Frame" id="F_Buttons">
+            <property name="height">200</property>
+            <property name="relief">groove</property>
+            <property name="width">200</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">left</property>
+            </layout>
+            <child>
+              <object class="tk.Button" id="btn_start">
+                <property name="activebackground">#3756e1</property>
+                <property name="activeforeground">#ffffff</property>
+                <property name="background">#283184</property>
+                <property name="command" type="command" cbtype="simple">capture</property>
+                <property name="cursor">hand2</property>
+                <property name="font">{Microsoft YaHei} 12 {bold}</property>
+                <property name="foreground">#ffffff</property>
+                <property name="text" translatable="yes">BAŞLAT</property>
+                <layout manager="pack">
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
+                  <property name="padx">5</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="side">left</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="btn_stop">
+                <property name="activebackground">#e4453a</property>
+                <property name="activeforeground">#ffffff</property>
+                <property name="background">#c12515</property>
+                <property name="command" type="command" cbtype="simple" args="">stop</property>
+                <property name="cursor">hand2</property>
+                <property name="font">{Microsoft YaHei} 12 {bold}</property>
+                <property name="foreground">#ffffff</property>
+                <property name="text" translatable="yes">BİTİR</property>
+                <layout manager="pack">
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
+                  <property name="padx">5</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="side">left</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Panedwindow.Pane" id="P_Body">
+        <property name="weight">16</property>
+        <child>
+          <object class="ttk.Panedwindow" id="PW_Body">
+            <property name="height">200</property>
+            <property name="orient">horizontal</property>
+            <property name="width">200</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+            <child>
+              <object class="ttk.Panedwindow.Pane" id="P_Left">
+                <property name="weight">3</property>
+                <child>
+                  <object class="pygubu.builder.widgets.scrolledframe" id="SF_Canvas">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="pack">
+                      <property name="expand">true</property>
+                      <property name="fill">both</property>
+                      <property name="propagate">True</property>
+                      <property name="side">top</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Canvas" id="canvas_image">
+                        <property name="background">#2c2c2c</property>
+                        <property name="height">480</property>
+                        <property name="width">640</property>
+                        <layout manager="pack">
+                          <property name="expand">true</property>
+                          <property name="propagate">True</property>
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Panedwindow.Pane" id="P_Footer">
+        <property name="weight">1</property>
+        <child>
+          <object class="ttk.Notebook" id="NB_Footer">
+            <property name="height">100</property>
+            <property name="width">200</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+            <child>
+              <object class="ttk.Notebook.Tab" id="tab_msg_log">
+                <property name="text" translatable="yes">Message Log</property>
+                <child>
+                  <object class="tk.Text" id="txt_log">
+                    <property name="background">#404040</property>
+                    <property name="foreground">#ffffff</property>
+                    <property name="height">10</property>
+                    <property name="width">50</property>
+                    <layout manager="pack">
+                      <property name="propagate">True</property>
+                      <property name="side">top</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
